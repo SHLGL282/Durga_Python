@@ -1,10 +1,285 @@
-@sahgoyal 3/6/2020
+@sahgoyal - 3/June/2020
 
 1) Python is a general-purpose, high-level, programming language.
 
 2) Guido Van Rossum is the father of Pyhton language. He developed Pyhon in 1989 While working on National Research Institute(NRI) Neetherland they developed Python Language.
 
 3) Python found in late 1989 but first offical version released on 20th Feb 1991 Before JAVA language as java came in 1995-96.
+
+@sahgoyal - 9/June/2020
+
+4) Python is all rounder i.e.--- Functional programming, OOPS orianted, Scripting language & Moduler language.
+
+    a) Python as Functional Programming:
+       In single line we discried the func is called functional programming.
+       When deal with data set make it immutable type so anyhow we can not change or delete it.  Then perform the desired operation on immutable data set.
+       Like : filter(), map(), reduce() ...etc...!!!
+
+5) Identifier : { Get SyntexError: if Wrong identifier used }
+   Name of a variable, class, function (to identify) in python is Identifier.
+
+   Rules to create identifier:
+   a) A-Z,a-z,0-9,'_'(Underscore) can be used.
+   b) Identifier do not start with digits .
+   c) Python is case-sensitive.
+   d) Do not take too much length for identifier. Its not recomanded but we can take.
+   e) Do not use reserved word as identifier.
+   Note:-
+     x   : Normal variable
+    _x   : Protected variable
+   __x   : Private variable
+   __x__ : Magic variable at python level variable. Predifined variables.
+
+6) Reserved Words: (Keywords) {Get NameError: if Wrong Name used }
+   Total RW are 33 + 2 new {till Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018}
+
+   @3   True, False, None
+   @4   and, or, not, is
+   @3   if, elif, else
+   @7   while, for, break, continue, return, in, yield
+   @5   try, except, finally, raise, assert
+   @6   import, from, as, class, def, pass
+   @5   global, nonlocal, lemda, del, with
+
+   @2 -- New -->  'async', 'await'
+
+   To check the keyword below is the code:
+   import keyword
+   keyword.kwlist
+
+7) Data Type:
+   Pyhon is Dynamically typed programming language. Not Statically Typed like C, C++, java.
+   Eg:
+       a = 10
+       type(a) ---> to know data type of varible a
+       id(a)   ---> to know the address of varible object a
+       print(a)---> to know the value of varible a
+
+    a) int Datatype:
+       long --> in python 2.0 not in 3.0
+       a=10 can be represent in below four form :
+      A) decimal form (base 10) :
+          default number system form that we are using.
+          allowed digit are 0-9 .
+
+      B) Decimal form (base 2) :
+          allowed digit are 0 & 1 only
+          prefixed with '0b' or '0B' is treated as binery form PVM (pyhton virtual machine)
+          Ex :
+          a = 0b1111 --> in binery form
+          print (a)  --> Convert to decimal form and print i.e.15
+
+          Conversion :
+          (a)Base_2 ->->-> (a)Base_10
+          1111 Base_2-> ((2^3*1)+(2^2*1)+(2^1*1)+(2^0*1)) =15 Base_10
+
+      C) Octal   form (base 8) :
+          allowed digit are 0-7 only
+          prefixed with '0o' or '0O' is treated as Octal form PVM.
+          Ex:
+          a = 0o123 --> in Octal form
+          print (a)  --> Convert to decimal form and print i.e.83
+
+          Conversions :
+          (a)Base_8 ->->-> (a)Base_10
+          123 Base_8-> (((8^2*1)+(8^1*2)+(8^0*3)) = 83 Base_10
+
+      D) Hexadecimal  (base 16):
+         allowed digit are 0-9 & A-F/a-f only
+         a=10 and f=15
+         prefixed with '0x' or '0X' is treated as Hexadecimal form PVM.
+
+      @sahgoyal 10/June/2020
+
+      Base Covertion Functions :
+      From one to another. Python provide three functions :
+      a) bin()
+         Ex : bin(15), bin(0o123), bin(0xFace)
+      b) oct()
+      c) hex()
+
+    b) float datatype:
+       Ex : 1.2234
+       we can represent float values in decimal form only . Not in other form.
+       For Float datatype, we can have exponential form or scientific notation.
+       Ex: f= 1.2e3 -> print(f) -> o/p is : 1200.0
+       We can take small e or E for exponantial form.
+
+    c) complex datatype:
+       Syntex is: a+bj and in this
+       a= real part
+       b= imaginery part
+       j= (-1^(1/2)) ; j can be small latter(j) ot capital latter(J).
+       to find out real and imaginery part of complext no. Below is the predifiend fun:
+       Ex: 10+20j
+       print(x.real)  --> return float value --> 10.0
+       print(x.imag)  --> return float value --> 20.0
+
+       IN real and imaginery part we can take integer or float value both.
+       EX: 10+20j     --> Correct
+           10.0+20J   --> Correct
+           10.5+20.6j --> Correct
+
+       Imaginery part should be decimal form always but real part we can use in all form like binery, octal, decimal or hexadecimal form.
+       Ex: x = 0b1111+20j --> print(x) ---> 15+20j  (correct)
+           x = 20+0b1111j --> Syntex error
+
+       If we have two complex no we can perform airthmatic operations like (+-*/).
+
+    d) bool datatype:
+       Allowed values for Boolean datatype is True and False.
+       True = 1 And False = 0 internally in python.
+       print(True+True)  --> 2
+       print(True-False) --> 1
+
+    e) str datatype:
+       Allowed one are : 'Str line' or "string line" or '''Str''' or """ str"""
+       Use of using Triple quotes:
+       1) To define Multiline string literals
+       2) To use '' and "" quotes as noram characters in our srting.
+       3) To define doc string
+
+       String operator never raise indexError.
+       Ex: s="sahil"
+       print(s[3:1000])  ---> it will not throw IndexError
+       print(5:1) ---> it will return empty str like this " ".
+
+       + Operator -> Apply on str, when both variable should be str type.
+
+       String repetation operator (*) :
+       s = "sahil"*3 --> Print(s) --> sahilsahilsahil
+
+    @sahgoyal 11/6/2020
+
+    Type Conversion, type casting, type coercion, and type juggling :
+       a) int():
+          convert float to int :
+             Ex: int(10.9908) --> 10
+          Convert complex to int:  {Not possible)
+             Ex: int(10+20j) --> typeError
+          Convert bool to int:
+             Ex: int(False) --> 0
+             Ex: int(True)  --> 1
+          Convert str to int() :
+             Posible but str should contain only integral value in only decimal form not in binery, octal or hexadecimal form.
+             Ex : int('111')  ---> 111
+             Ex : int('ob111') ---> typeError
+             Ex : int('10.5') ---> typeError
+
+       b) float():
+          convert int to float :
+             Ex: float(10) --> 10.0
+             Ex: float(0xFace) --> 64026.0
+             Ex: float(ob1111) --> 15.0
+          Convert complex to float:  {Not possible)
+             Ex: float(10+20j) --> typeError
+          Convert bool to float:
+             Ex: float(False) --> 0.0
+             Ex: float(True)  --> 1.0
+          Convert str to float :
+             Posible but str should contain only integral value or float value and only in decimal form not in binery, octal or hexadecimal form.
+             Ex : float('111')  ---> 111.0
+             Ex : float('0xFace') ---> ValueError
+             Ex : float('10.5') ---> 10.5
+
+       c) Complex ():
+          convert int to complex :
+             Ex: complex(10) --> 10+0j
+             Ex: complex(0b1111) --> 15+0j
+          Convert float to complex:
+             Ex: complex(10.5) --> 10.5+0j
+          Convert bool to complex:
+             Ex: complex(False) --> 0+0j =0j
+             Ex: complex(True)  --> 1+0j
+          Convert str to complex :
+             Posible but str should contain only integral value or float value and only in decimal form not in binery, octal or hexadecimal form..
+             Ex : complex('111')  ---> 111+0j
+             Ex : complex('ob111') --->  ValueError
+             Ex : complex('10.5') ---> 10.5+0j
+
+          Ex: complex(10,20) --> 10+20j
+          Ex: complex(10.5,20.6) --> 10.5+20.6j
+          Ex: complex('10','20') --> typeError 2nd argument sholud not be string
+          Ex: complex(10,'20') --> typeError 2nd argument sholud not be string
+
+       d) bool():
+          Non zero value retun True and zero values return False
+          Ex: bool(10) --> True
+          Ex: bool(0) --> False
+          Ex: bool(0.0) --> False
+          Ex: bool(0.1) --> True
+          Ex: bool(0+0j) --> False
+          Ex: bool(1+0j) --> True
+          Ex: bool('True') --> True
+          Ex: bool('False') --> True
+          Ex: bool('yes') --> True
+          Ex: bool('no') --> True
+          Ex: bool('') --> False
+
+       e) str()
+          Ex: str(10) --> '10'
+          Ex: str(0x1111) --> '15'
+          Ex: str(10.5) --> '10.5'
+          Ex: str(True) --> 'True'
+          Ex: str(False) --> 'False'
+          Ex: str(10+20j) --> '(10+20j)'
+
+    Fundamental datatypes are : int,float,complex,bool,str
+    Other then complex dataype all are immutale object only.
+
+    Datatype  Im/Mutable  Duplicate	 indexing  Insertion-order  hatro/Homo  Notation  Growable(add,delete)
+	  List	   Mutalbe	   Allowed     yes       preserved        Hatro      [10,20]             yes
+	 touple    Immutable   Allowed     yes       preserved        Hatro      (10,20)              No
+	  set      Mutable       N/A       N/A     Not preserved      Hatro      {10,20}             yes
+	frozenset  Immutable     N/A       N/A     Not preserved      Hatro   frozenset(set)          No
+	  Dict     Mutable   dup.keys N/A  N/A     Not preserved      Hatro     {key:value}          yes
+      Dict               dup.values A
+     Range     Immutable      N/A       yes       Preserved       int_type  range(start,end,step)  No
+
+    f) list datatype :
+       l="sahi"
+       l.append('l')  --> to add
+       l.remove('a')  --> to remove
+
+    g) tuple datatype :
+       for single int value in tuple we need to add ',' in the end otherwise it will consider as noraml int type.
+       t=() --> tuple type
+       t=(10) ---> int type
+       t=(10,) --> tuple type
+
+    h) set :
+       s={10,20,30,40)
+       s.add(50)
+
+       Ex: s={}
+       print(type(s)) ---> <Dict Object>
+
+       For creating empty set use :
+       s=set ()
+       print(type(s)) ---> <Set Object>
+       Print(s) --> set()
+
+    i) frozen set datatype:
+
+    j) Dictionary datatype:
+
+    k) bytes datatype :
+       values should be in the range(0,256)
+       l= [10,20,30,40]
+       b=bytes(l)
+       byte is Immutable but slicing/Indexing is there.
+
+
+    l) bytearray datatype:
+       values should be in the range(0,256).
+       Mutable & slicing/Indexing is also there.
+       l= [10,20,30,40,50]
+       b=bytearray(l)
+
+    m) range datatype:
+       range(start, end, step)
+
+    n) None :
 
 
 
