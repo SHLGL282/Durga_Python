@@ -279,7 +279,10 @@
     m) range datatype:
        range(start, end, step)
 
-    n) None :
+    n) None datatype :
+    its is the object in python . And in python we can spicy it multiple times but it will refer to only one object.
+
+Constant variable is not there pyhton. That we can not change the value of this veraible. We have convention that if we do not want to change value of a python varible throughout the code then we have to declare it in capital latters. BUt this does not mean we can not change the variable. Its a convention only.
 
 
 
