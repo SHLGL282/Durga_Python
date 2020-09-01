@@ -1,0 +1,162 @@
+Operators:
+
+1) Arithmetic Operators: +,-,*,/,%
+    %  --> Module operator (return remainder)
+    /  --> Normal division
+    // --> Floor division
+    *  --> Normal Multiplication
+    ** --> Power operator/ Exponential Operator
+
+    Division Operator -
+      -Always return  float values.
+       Ex: print(10/2) -->5.0
+
+    Floor Operator -
+      -Return int and float result , based on values. If any one no is float it will return  float value. otherwise int value.
+       Ex: print(10.0/2) --> 5.0
+           print(10/2)   --> 5
+
+    + Operator for string :
+      -If we are applying for string type then both values should be string type. Otherwise will get typeError.
+       Ex: print("sahil" + "goyal") --> "sahilgoyal"
+           print("sahil" + 10 ) --> typeError
+
+    * Operator for string :
+      -It will return the n times the string.
+       Ex: print("sahil"*3) --> "sahilsahilsahil"
+           print("sahil"*True) --> "sahil"
+           print("sahil"*False) --> Not show any o/p Empty
+
+
+    ZeroDivisionError : x/0 or x//0 or x.0/0 or x.0//0 In all these cases will get ZDError
+
+2) Relational Operator:
+   >, >=, <, <=
+   To know the unicode value of a string character use ord(). Ex: print(ord('a')) --> 97
+   and For vice versa use chr() fun. Ex: print(chr(97)) --> a
+
+   Compare by alphanumerically. Check the first latter of both the variable and if matches go for second and so on.
+   Ex: s1="durga"
+       s2="sahil"
+       print(s1<s2)  ---> True
+       print(s1<=s2) ---> True
+       print(s1>s2)  ---> False
+       print(s1>=s2) ---> False
+
+   Chaining or nested comparision operator:
+   In this case we have to compare each comparison and if all are true then only it will return true. If any one fail it will return false only.
+   Ex: 10<20          ---> True
+       10<20<30       ---> True
+       10<20<30<40    ---> True
+       10<20<30<40>50 ---> False
+       -----
+        T -----
+           T -----
+              T -----
+                  F
+
+3) Relational Operator:
+   == and !=
+   It wont give any error for incompatible types.
+
+   Ex: 10==20 --> False
+       10!=20 --> True
+       1==True --> True
+       10==10.0 -->True
+       'durga'== 'durga' -->True
+       10=='Durga' --> False
+       10=='10' --> False
+
+   Chaining or nested equality operator:
+   If all comparision returns true then only final result is True.
+   Ex: 10==20==30==40 ---> False
+
+4) Logical Operator:
+   and, or, not
+   and : Return true only if both argument are true.
+   or : Return true when any one argument is true.
+
+   AND : For non Boolean value 'AND' logical operator:
+      X and Y
+     -Result won't be boolean value(True/False).
+     -If first argument(X) is evaluated False then, result will be first argument(X).
+         X(False) and Y --> X (result)
+     -If first argument(X) is evaluated True then, result will be 2nd argument(Y).
+         X(True) and Y --> Y (result)
+
+        -Ex: 10 And 20 ----> 20 (because 1st argument is true as its nonzero )
+             0 and 10  ----> 0 (as 1st argument is False as zero is false)
+             'sahil' and 'goyal'---> goyal (as first argument is nonempty and its true)
+             " " and 'sahil' ---> " "  (as first argument is empty str and its False. return 1st argument)
+
+   Or : For non Boolean value 'OR' logical operator:
+     X or Y
+     -Result won't be boolean value(True/False).
+     -If first argument(X) is evaluated True then, result will be first argument(X).
+         X(True) and Y --> X (result)
+     -If first argument(X) is evaluated False then, result will be 2nd argument(Y).
+         X(False) and Y --> Y (result)
+
+   NOT : For non Boolean value 'NOT' logical operator:
+     --Result will be boolean value(True/False) only.
+
+5) Bitwise Operators:
+            >>> bit by bit addition
+            >>> we can do for int and boolean type values only.
+   & - Bitwise and operator
+            If both bit are 0ne then result is 1 otherwise 0
+   | - Bitwise or operator
+            If atleast one bit is 1 result is 1
+   ^ - Bitwise x-or operator
+           if both bit are different then will get result 1
+   ~ - Bitwise compliment operator
+           >>> Most significant bit (MSB) acts as sign bit
+               0 means +ve
+               1 means -ve
+           >>> +ve number will be represented directly in memory
+           >>> -ve number will be represented in 2's complement
+
+           1's complement -> Change 0 to 1 and vice versa
+           2's complement -> 1's complement + 1
+
+   << - Bitwise left-shift operator
+   >> - Bitwise right-shift operator
+
+
+6) Assignment Operator:
+   increment and decrement operators are not there in python. If we use get syntax Error.
+
+7) Ternary Operator:
+   a=10
+   b=20
+   c= 30 if (a>b) else 40
+
+Special Operators:
+1) Identity Operators:
+    is : return true only if both references point to the same object.
+    is not : return true only if both references NOT point to the same object.
+2) Membership operators:
+    in : if condition in expression return true otherwise false.
+    not in : if condition is not in expression return false.
+
+
+ Python Operator Precedence :
+
+ ()                   --> Parenthesis operator
+ **                   --> Exponential operator
+ ~,-                  --> bitwise complement operator, unary minus operator
+ *, /, %, //          --> multiplication, division, modulo, floor division
+ +, -                 --> addition, subtraction
+ <<, >>               --> Left shift , right shift
+ &                    --> bitwise and
+ ^                    --> bitwise x-or
+ !                    --> bitwise or
+ >, >=, <, <=, ==, !  --> Relational or Comparison operator
+ =, +=, ==,,*=        --> Assignment operator
+ is, is not           --> identity operator
+ in, not in           --> membership operator
+ not                  --> logical not
+ and                  --> logical and
+ or                   --> logical or
+
+
