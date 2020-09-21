@@ -1,0 +1,30 @@
+1) raw_input and input() difference:
+2) Python3 input() function:
+3) How to read multiple values from keyboard in a single line:
+4) Command line argument:
+5) Output Statement : print() function
+6) sep attribute :
+7) end attribute :
+8) Printing formatted string:
+
+9) Replacement Operators:
+
+     name='sahil'
+     salary=20000
+     friend='mohit'
+     print("Hello {}, your salary is {} and your friend {} came to meet you. ".format(name,salary,friend))
+     print("Hello {0}, your salary is {1} and your friend {2} came to meet you. ".format(name,salary,friend))
+     print("Hello {n}, your salary is {s} and your friend {f} came to meet you. ".format(n=name,s=salary,f=friend))
+
+     Formatted string:
+     %i --> Signed decimal value
+     %d --> Signed decimal value
+     %f --> for float
+     %s --> for string and other objects like list, tuple, etc..
+
+     Ex :
+     print("hello %s, your salary is %d and your friend %s came to meet you." %(name, salary, friend))
+
+     a=17.78967 #print only 2 values after decimal
+     print("value of a is %.2f" %a)
+          Result >>>  value of a is 17.79
